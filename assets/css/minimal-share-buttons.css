@@ -1,0 +1,87 @@
+.gutenberg div[data-type="msb/share"] .editor-block-list__block-edit > div::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.msb-container.aligncenter {
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.msb-container h2,
+.entry-content .msb-container h2,
+.page-content .msb-container h2 {
+  font-size: 1em;
+  margin: 0;
+}
+
+:root button.minimal-share-button,
+:root a.minimal-share-button:link,
+:root a.minimal-share-button:hover {
+  position: relative;
+  display: inline-block;
+  border: none;
+  background: none;
+  text-decoration: none;
+  box-shadow: none;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+:root button.minimal-share-button {
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  font: inherit;
+  line-height: 1;
+  text-transform: none;
+}
+
+:root a.minimal-share-button::after,
+:root a.minimal-share-button .icon-webfont {
+  display: none;
+}
+
+.minimal-share-button svg {
+  width: 2em;
+  height: 2em;
+  fill: currentColor;
+}
+
+button.minimal-share-button:focus,
+a.minimal-share-button:focus {
+  outline: 0;
+}
+
+.minimal-share-button:focus svg {
+  outline: 1px dotted currentcolor;
+}
+
+:root button.minimal-share-button:hover::after,
+:root button.minimal-share-button:focus::after,
+:root a.minimal-share-button:hover::after,
+:root a.minimal-share-button:focus::after {
+  content: attr(aria-label);
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: .5em;
+  background-color: black;
+  color: #fff;
+  word-wrap: normal;
+  word-break: normal;
+}
+
+:root button.msb-native-share {
+	display: none;
+}
+
+:root button.native-share-available {
+	display: inline-block;
+}

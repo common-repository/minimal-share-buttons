@@ -1,0 +1,55 @@
+<?php
+
+/**
+ * Returns the list of available social networks.
+ *
+ * @return array Array of associative arrays describing social networks available for sharing.
+ */
+function msb_get_socials() {
+
+	$socials = [
+		'facebook' => [
+			'field_label' => __( 'Facebook', 'minimal-share-buttons' ),
+			'button_label' => __( 'Share on Facebook', 'minimal-share-buttons' ),
+			'share_url' => 'https://facebook.com/sharer.php?u=%1$s&t=%2$s',
+		],
+		'twitter' => [
+			'field_label' => __( 'X (Twitter)', 'minimal-share-buttons' ),
+			'button_label' => __( 'Share on X (Twitter)', 'minimal-share-buttons' ),
+			'share_url' => 'https://twitter.com/intent/tweet?url=%1$s&text=%2$s',
+		],
+		'mastodon' => [
+			'field_label' => __( 'Mastodon', 'minimal-share-buttons' ),
+			'button_label' => __( 'Share on Mastodon', 'minimal-share-buttons' ),
+			'share_url' => 'https://toot.kytta.dev/?text=%2$s%%20-%%20%1$s',
+		],
+		'threads' => [
+			'field_label' => __( 'Threads', 'minimal-share-buttons' ),
+			'button_label' => __( 'Share on Threads', 'minimal-share-buttons' ),
+			'share_url' => 'https://www.threads.net/intent/post?text=%2$s+%1$s',
+		],
+		'linkedin' => [
+			'field_label' => __( 'LinkedIn', 'minimal-share-buttons' ),
+			'button_label' => __( 'Share on LinkedIn', 'minimal-share-buttons' ),
+			'share_url' => 'https://www.linkedin.com/sharing/share-offsite/?url=%1$s&title=%2$s',
+		],
+		'pinterest' => [
+			'field_label' => __( 'Pinterest', 'minimal-share-buttons' ),
+			'button_label' => __( 'Share on Pinterest', 'minimal-share-buttons' ),
+			'share_url' => 'https://pinterest.com/pin/create/button/?url=%1$s&description=%2$s',
+		],
+		'reddit' => [
+			'field_label' => __( 'Reddit', 'minimal-share-buttons' ),
+			'button_label' => __( 'Share on Reddit', 'minimal-share-buttons' ),
+			'share_url' => 'http://www.reddit.com/submit?url=%1$s&title=%2$s',
+		],
+		'email' => [
+			'field_label' => __( 'Email', 'minimal-share-buttons' ),
+			'button_label' => __( 'Share by email', 'minimal-share-buttons' ),
+			'share_url' => 'mailto:?body=%1$s&subject=%2$s',
+		],
+	];
+
+	return apply_filters( 'msb_socials', $socials );
+
+}
